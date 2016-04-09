@@ -17,7 +17,7 @@ class Doorbell:
             userId = message['from']['id']
             #print 'Doorbell enabled for user ' + userId
             self.users.append(userId)
-
+            return "Te notificaremos de las llamadas al timbre"
 
 
 
