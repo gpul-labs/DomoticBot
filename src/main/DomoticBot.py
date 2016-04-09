@@ -1,6 +1,6 @@
 import telepot
 from commands import *
-from nodebase.NodeBase import *
+from nodebase import *
 
 class DomoticBot:
 
