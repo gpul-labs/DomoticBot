@@ -15,15 +15,17 @@ class Notify:
     def processMessage(self, message):
         content_type, chat_type, chat_id = telepot.glance(message)
         command = message['text'].strip().lower()
+        if len(command) != 2 or len(command) != 3:
+            return "Usage: /notify on|off minutes"
         text = command[0]
         enabled =  command[1]
         delay = command[2]
 
+        if enabled == 'on' and not delay.isdigit():
+            return "Error: minutes are not numeric"
+
         if enabled != 'on' or enabled != 'off':
             return "Error: I do not understand"
-
-        if delay.isdigit():
-            return "Error: minutes are not numeric"
 
         if content_type == 'text' and text == '/notify':
             self.enabled = enabled
