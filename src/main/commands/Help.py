@@ -19,8 +19,7 @@ class Help:
             /stop - Finaliza la sesión del bot\n
             /temp - Fija la temperatura\n
             /notify [on minutos | off] - Muestra la temperatura cada X minutos\n
-            /notify doorbell - Activa las notificaciones de llamadas a la puerta
-            /list - Lista de devices y sus salas\n"""
+            /doorbell - Activa las notificaciones de llamadas a la puerta
 
             print the_help
             userId = message['from']['id']

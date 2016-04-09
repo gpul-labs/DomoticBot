@@ -10,7 +10,7 @@ class Doorbell:
     def processMessage(self, message):
         content_type, chat_type, chat_id = telepot.glance(message)
 
-        if content_type == 'text' and message['text'] == '/notify doorbell':
+        if content_type == 'text' and message['text'] == '/doorbell':
 
             self.doorbell.setHandler(self.doorlock_handler)
             #poner un handler en el domoticNodes
@@ -22,8 +22,8 @@ class Doorbell:
 
 
     def doorlock_handler(self, rutaFichero):
-        foto = open(rutaFichero, 'rb')
         for user in self.users:
             self.bot.sendMessage(user, "Estan tocando a la puerta")
+            foto = open(rutaFichero, 'rb')
             self.bot.sendPhoto(user, foto)
 
