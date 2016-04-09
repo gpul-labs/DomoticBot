@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 
-class doorbell(:
+class doorbell:
    def isSwitchActive(self):
       return True if GPIO.input(17) else False
 
