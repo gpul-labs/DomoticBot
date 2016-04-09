@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>DomoticBot</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/simple.css" id="theme">
+
+        <style>
+            .reveal h1{
+                font-size: 2.5em;
+            }
+            .reveal h2{
+                font-size: 1.875em;
+            }
+            .reveal h3{
+                font-size: 1.25em;
+            }
+            .reveal h4{
+                font-size: 1em;
+            }
+            .reveal h5{
+                font-size: 0.894em;
+            }
+            .reveal h6{
+                font-size: 0.816em;
+            }
+            .reveal .slides section .multicolumn > ul {
+                -moz-column-count: 2;
+                -moz-column-gap: 50%;
+                -webkit-column-count: 2;
+                -webkit-column-gap: 50%;
+                column-count: 2;
+                column-gap: 50%;
+            }
+            .reveal img, .reveal video, .reveal iframe {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            /*
+            .reveal ul, .reveal ol, .reveal li{
+              font-size: 0.816em;
+            }
+            */
+            .list-unstyled {
+                padding-left: 0;
+                list-style: none;
+            }
+            .list-inline {
+                padding-left: 0;
+                margin-left: -5px;
+                list-style: none;
+            }
+            .list-inline > li {
+                display: inline-block;
+                padding-right: 5px;
+                padding-left: 5px;
+                padding: 5px;
+            }
+            .list-inline > li.actived {
+                background-color: hsla(78, 93%, 39%, 1);
+                padding: 5px;
+            }
+        </style>
+    
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section class="center" data-markdown="slides/0_index.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/1_introduction.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/2_documentation.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/3_features.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/goal.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-background-video="resources/demo.mov" data-markdown="slides/demo.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/greetings.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section class="center" data-markdown="slides/license.md"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+              controls: false,
+              progress: true,
+              history: true,
+              center: false,
+              slideNumber : true,
+              fragments: true,
+              mouseWheel: true,
+              touch: true,
+              hideAddressBar: true,
+              transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+            ]
+          });
+
+          // Slide number formatting can be configured using these variables:
+          //  h: current slide's horizontal index
+          //  v: current slide's vertical index
+          //  c: current slide index (flattened)
+          //  t: total number of slides (flattened)
+          Reveal.configure({ slideNumber: 'c / t' });
+
+        </script>
+    </body>
+
+</html>

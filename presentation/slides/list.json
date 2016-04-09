@@ -1,0 +1,51 @@
+[
+  {
+    "filename": "0_index.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "1_introduction.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "2_documentation.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "3_features.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "goal.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "demo.md",
+    "attr": {
+      "class": "center",
+      "data-background-video": "resources/demo.mov"
+    }
+  },
+  {
+    "filename": "greetings.md",
+    "attr": {
+      "class": "center"
+    }
+  },
+  {
+    "filename": "license.md",
+    "attr": {
+      "class": "center"
+    }
+  }
+]
