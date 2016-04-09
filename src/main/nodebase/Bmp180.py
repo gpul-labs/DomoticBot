@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import Adafruit_BMP.BMP085 as BMP085
 
-class bmp180:
+class Bmp180:
    def temp(self):
       """
       Returns temperature in C*
@@ -17,6 +17,12 @@ class bmp180:
       Returns altitude in meters relative to sea level. Temp dependent
       """
       return float('{0:0.2f}'.format(self.sensor.read_altitude()))
+
+   def initialize(self):
+      return
+
+   def update(self):
+      return
 
    def __init__(self):
       self.sensor = BMP085.BMP085()
