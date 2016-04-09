@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 
-class pir():
+class pir:
    def isPirActive(self):
       return True if GPIO.input(23) else False
 

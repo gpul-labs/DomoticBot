@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import Adafruit_BMP.BMP085 as BMP085
 
-class bmp180():
+class bmp180:
    def temp(self):
       """
       Returns temperature in C*
