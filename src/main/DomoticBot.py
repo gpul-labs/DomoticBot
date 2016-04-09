@@ -10,6 +10,7 @@ from nodebase.NodeDoorbell import NodeDoorbell
 from nodebase.NodeClimatization import NodeClimatization
 from nodebase.NodeDoorlock import NodeDoorlock
 from nodebase.Buzzer import Buzzer
+from commands.Notify import Notify
 
 class DomoticBot:
     def __init__(self):
@@ -22,7 +23,8 @@ class DomoticBot:
             Stop(self.bot, self.users),
             Help(self.bot),
             Doorbell(self.bot,self.domoticNodes),
-            #Temp(self.bot),
+            Notify(self.bot,self.domoticNodes),
+            Temp(self.bot,self.domoticNodes)
             ]
         self.bot.notifyOnMessage(self.handle_message)
 
