@@ -21,9 +21,10 @@
             -20
 
     - Notificaciones periodicas sobre la temperatura cierto tiempo
-        - /temp notify on
+        - /notify on
+        - {device | all}
         - {minutes period}
-        - /temp notify off
+        - /notify off
 
     - Ver lista de opciones
         - /list
@@ -46,7 +47,7 @@
             - /newbot - create a new bot
             - /token - generate authorization token
 ```
-    3. Conectar sensores a la RaspberryPi. 
+    3. Conectar sensores a la RaspberryPi.
         - Ver [charla2](https://github.com/gpul-labs/charla-2) de GPUL Labs by @ResonantWave
     4. Evitar DDoS poniendo sleep entre cada petición
         ```php
