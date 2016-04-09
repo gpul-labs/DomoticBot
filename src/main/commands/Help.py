@@ -1,16 +1,18 @@
-from config import *
+# encoding: utf-8
 import telepot
 import pprint
 import time
 
 # Help class to show the help in Telegram Bot
 class Help:
-    def __init__(self):
+
+    def __init__(self, bot):
+        self.bot = bot
 
     def processMessage(self, message):
         content_type, chat_type, chat_id = telepot.glance(message)
 
-        if content_type == 'text' && message['text'] == '/help':
+        if content_type == 'text' and message['text'] == '/help':
             print("Este es el bot de Domotica de la Hackathon de GPUL Labs\n")
             print("/start - Inicializa el bot\n")
             print("/help - Muestra la lista de comandos\n")
@@ -19,4 +21,3 @@ class Help:
             print("/notify - Muestra la temperatura cada X minutos\n")
             print("/list - Lista de devices y sus salas\n")
 
-        
