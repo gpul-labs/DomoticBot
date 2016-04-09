@@ -1,7 +1,9 @@
 import telepot
+import time
 from commands.Start import Start
 from commands.Stop import Stop
 from commands.Help import Help
+from commands.Doorbell import Doorbell
 from nodebase.DomoticNodes import DomoticNodes
 from nodebase.NodePresence import NodePresence
 from nodebase.NodeDoorbell import NodeDoorbell
@@ -26,11 +28,11 @@ class DomoticBot:
 
 
     def __configureDomoticNodes(self):
-        nodes = DomoticNodes.DomoticNodes()
-        nodes.addNode(NodePresence.NodePresence(23)) # gpio
-        nodes.addNode(NodeDoorbell.NodeDoorbell(17, 26, 1, 3000)) # gpio, gpioBuzzer, duration, frequency
-        nodes.addNode(NodeClimatization.NodeClimatization(22, 24)) # gpioCooler, gpioHeater
-        nodes.addNode(NodeDoorlock.NodeDoorlock(18))
+        nodes = DomoticNodes()
+        nodes.addNode(NodePresence(23)) # gpio
+        nodes.addNode(NodeDoorbell(17, 26, 1, 3000)) # gpio, gpioBuzzer, duration, frequency
+        nodes.addNode(NodeClimatization(22, 24)) # gpioCooler, gpioHeater
+        nodes.addNode(NodeDoorlock(18))
         nodes.initialize()
         return nodes
 

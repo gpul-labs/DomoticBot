@@ -1,6 +1,6 @@
 import telepot
 
-class Doorlock:
+class Doorbell:
     def __init__(self, bot, domoticNodes):
         self.bot = bot
         self.doorbell = domoticNodes.getNode('NodeDoorbell')
@@ -12,10 +12,10 @@ class Doorlock:
 
         if content_type == 'text' and message['text'] == '/notify doorbell':
 
-            self.doorbel.setHandler(self.doorlock_handler)
+            self.doorbell.setHandler(self.doorlock_handler)
             #poner un handler en el domoticNodes
             userId = message['from']['id']
-            print 'Doorbell enabled for user ' userId
+            #print 'Doorbell enabled for user ' + userId
             self.users.append(userId)
 
 
@@ -23,9 +23,7 @@ class Doorlock:
 
     def doorlock_handler(self, rutaFichero):
         foto = open(rutaFichero, 'rb')
-        for user in self.users
+        for user in self.users:
             self.bot.sendMessage(user, "Estan tocando a la puerta")
-            #coger la ruta del fichero de la foto
-
-            bot.sendPhoto(user, foto)
+            self.bot.sendPhoto(user, foto)
 
