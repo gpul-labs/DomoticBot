@@ -6,22 +6,17 @@ import time
 # Help class to show the help in Telegram Bot
 class Help:
     def __init__(self):
-        bot = telepot.Bot(BOT_TOKEN)
-        bot.notifyOnMessage(self.help)
 
-    def help(self, message):
+    def processMessage(self, message):
         content_type, chat_type, chat_id = telepot.glance(message)
 
         if content_type == 'text' && message['text'] == '/help':
             print("Este es el bot de Domotica de la Hackathon de GPUL Labs\n")
-            # TODO include instructions
+            print("/start - Inicializa el bot\n")
+            print("/help - Muestra la lista de comandos\n")
+            print("/stop - Finaliza la sesión del bot\n")
+            print("/temp - Fija la temperatura\n")
+            print("/notify - Muestra la temperatura cada X minutos\n")
+            print("/list - Lista de devices y sus salas\n")
 
-#def main():
-#    help_bot = Help()
-#    help_bot.help()
-#    TODO Include message dictionary from Telegram
-
-#if __name__ == '__main__':
-#    main()
-
-
+        

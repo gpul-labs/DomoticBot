@@ -29,12 +29,11 @@
     - Ver lista de opciones
         - /list
 
-    - Ver lista de dispositivos
-        - /device
-        climate-control-cocina
-
     - Ver estados
         - /status
+
+    - Cancelar commando
+        - /cancel
 
 # Pasos
     1. [Telepot](https://github.com/nickoala/telepot). Python framework for Telegram Bot API.
