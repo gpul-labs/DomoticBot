@@ -3,6 +3,7 @@ import time
 from commands.Start import Start
 from commands.Stop import Stop
 from commands.Help import Help
+from commands.Temp import Temp
 from commands.Doorbell import Doorbell
 from nodebase.DomoticNodes import DomoticNodes
 from nodebase.NodePresence import NodePresence
@@ -56,6 +57,7 @@ def main():
     domotic_bot = DomoticBot()
     while 1:
         domotic_bot.update()
+	print "updating the node"
         time.sleep(10)
 
 if __name__ == '__main__':

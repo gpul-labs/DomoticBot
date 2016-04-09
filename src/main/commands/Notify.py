@@ -40,9 +40,12 @@ class Notify:
             if enabled:
                 self.delay = float(delay) * 60.0
                 self.stop = False
-                self.threadId = thread.start_new_thread( self.notify(message) )
+                self.threadId = thread.start_new_thread( self.notify, (message,))
+		return "Te avisare cada " + delay + " minutos de la temperatura "
             else:
+		self.threadId.exit()
                 self.stop = True
+		return "Has detenido las notificaciones de temperatura"
 
     def notify(self, message):
         while not self.stop:
